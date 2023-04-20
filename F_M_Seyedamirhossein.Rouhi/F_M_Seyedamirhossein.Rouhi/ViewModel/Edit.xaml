@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F_M_Seyedamirhossein.Rouhi.ViewModel.Edit">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="18" Padding="5">
+            <Entry x:Name="txtID" Text="{Binding ID}" IsEnabled="False"/>
+            <Entry x:Name="txtKey" Text="{Binding Key}" IsEnabled="False"/>
+            <Entry x:Name="txtDescription" Text="{Binding Description}" Placeholder="Description"/>
+            <Picker x:Name="pickerTaskPriority" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="btnEdit" Text="Edit Task" BackgroundColor="DarkCyan" CornerRadius="11" Clicked="btnEditTask_Clicked" />
+            <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="Green" CornerRadius="11" Clicked="btnCancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

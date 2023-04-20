@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F_M_Seyedamirhossein.Rouhi.ViewModel.Signup">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand"  Spacing="20">
+                <Frame Margin="5,21,4,0" Padding="0" CornerRadius="11" BorderColor="Black">
+                    <StackLayout Orientation="Vertical" Padding="10,10,10,20">
+                        <Label Text="Username" FontSize="Medium" FontAttributes="Bold"/>
+                        <Entry x:Name="txtUsername" Text="" Placeholder="username" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="5,21,4,0" Padding="0" CornerRadius="11" BorderColor="Black">
+                    <StackLayout Orientation="Vertical" Padding="10,10,10,20" >
+                        <Label Text="Password" FontSize="Medium" FontAttributes="Bold"/>
+                        <Entry x:Name="txtPassword" Placeholder="password" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="36,0,36,0">
+                <Button x:Name="btnSignup" Text="Sign Up" BackgroundColor="Orange"  TextColor="Green" FontSize="21" CornerRadius="11" Margin="5" Clicked="btnSignup_Clicked"/>
+                <Button x:Name="btnCancel" Text="Cancel" TextColor="DarkKhaki" BackgroundColor="DarkMagenta" FontSize="18" Margin="5" Clicked="btnCancel_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="F_M_Seyedamirhossein.Rouhi.ViewModel.User">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="list" RowHeight="75" ItemSelected="list_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Spacing="0" Padding="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Task" FontSize="14" FontAttributes="Bold"/>
+                                    <Label Text="{Binding ID}" FontSize="14" FontAttributes="Bold"/>
+                                    <Label Text="Key:" FontSize="17" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Key}" FontSize="14" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="{Binding Description}" FontSize="14" Margin="0, 1, 0, 0"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Priority:" FontSize="14" HorizontalOptions="EndAndExpand"/>
+                                    <Label Text="{Binding Priority}" FontSize="14" HorizontalOptions="End"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <BoxView BackgroundColor="Gray"/>
+            <StackLayout Padding="5">
+                <Button x:Name="btnAdd" Text="Add" BackgroundColor="DarkGreen" CornerRadius="10" Clicked="btnAdd_Clicked"/>
+                <Button x:Name="btnEdit" Text="Edit" BackgroundColor="DarkGreen" CornerRadius="10" Clicked="btnEdit_Clicked"/>
+                <Button x:Name="btnDelete" Text="Delete" BackgroundColor="DarkGreen" CornerRadius="10" Clicked="btnDelete_Clicked"/>
+                <Button x:Name="btnLogout" Text="Logout" BackgroundColor="DarkGreen" CornerRadius="10" Clicked="btnLogout_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
